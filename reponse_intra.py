@@ -21,13 +21,15 @@ question1()
 import numpy as np
 import matplotlib.pyplot as plt
 
-pop_bacterie_initiale = int(input("Entrez la population de bactérie initiale :"))
-pop_chaque_heure = pop_bacterie_initiale + np.pi/1.5
+pop_bacterie_initiale = input("Entrez la population de bactérie initiale :")
+pop_chaque_heure = pop_bacterie_initiale + str((np.pi)/(1.5))
 
 plt.figure(figsize=(1,1))
 plt.xlabel("heures")
 plt.ylabel("population")
-plt.label("Croissance bactérienne")
+plt.xlim(0, 10)
+plt.title("Croissance bactérienne")
+plt.plot(pop_chaque_heure, "*b")
 plt.grid()
 plt.show()
 
