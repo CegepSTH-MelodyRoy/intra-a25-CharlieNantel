@@ -6,7 +6,6 @@ for i in range(10):
     temperature = rdm.uniform(20, 35)
 
 def question1():
-
     if 24 < temperature <=30:
         message = "ok"
     elif temperature < 24:
@@ -21,10 +20,16 @@ question1()
 
 import numpy as np
 import matplotlib.pyplot as plt
-def question2():
-    pop_bacterie_initiale = int(input("Entrez la population de bactérie initiale :"))
-    pop_chaque_heure = pop_bacterie_initiale + np.pi/1.5
 
+pop_bacterie_initiale = int(input("Entrez la population de bactérie initiale :"))
+pop_chaque_heure = pop_bacterie_initiale + np.pi/1.5
+
+plt.figure(figsize=(1,1))
+plt.xlabel("heures")
+plt.ylabel("population")
+plt.label("Croissance bactérienne")
+plt.grid()
+plt.show()
 
 
 
